@@ -28,6 +28,7 @@ import { EditListingComponent } from './edit-listing/edit-listing.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { LogoutComponent } from './logout/logout.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 const routes:Routes = [
@@ -82,7 +83,8 @@ const routes:Routes = [
     EditListingComponent,
     LoginComponent,
     RegisterComponent,
-    LogoutComponent
+    LogoutComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

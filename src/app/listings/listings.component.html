@@ -1,0 +1,41 @@
+<br>
+<div class="container">
+        <ul class="list-group">
+                <li class="list-group-item" *ngFor="let list of lists | async">
+                    <a [routerLink]="['/listing/'+list.id]">{{list.title}}</a>
+            
+                </li>
+            </ul>
+</div>
+
+
+
+<!-- <ul *ngFor="let list of lists | async">
+    <li class="text">
+        {{list.bedrooms}}
+    </li>
+    <li class="text">
+        {{list.city}}
+    </li>
+    <li class="text">
+        {{list.image}}
+    </li>
+    <li class="text">
+        {{list.path}}
+    </li>
+    <li class="text">
+        {{list.owner}}
+    </li>
+    <li class="text">
+        {{list.price | currency}}
+    </li>
+    <li class="text">
+        {{list.title}}
+    </li>
+    <li class="text">
+        {{list.type}}
+    </li>
+    <li class="text">
+        {{list.id}}
+    </li>
+</ul> -->

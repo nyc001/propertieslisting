@@ -1,0 +1,8 @@
+<div>
+    <input placeholder="Email" type="email" [(ngModel)]="loginData.email">
+    <input placeholder="Password" type="password" [(ngModel)]="loginData.password">
+
+    <button (click)="afAuth.emaillogin(loginData)" [disabled]="!loginData.email || !loginData.password">
+        Login
+    </button>
+</div>

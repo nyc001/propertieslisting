@@ -1,0 +1,28 @@
+<!-- <div *ngIf="afAuth.user | async as user; else showLogin">
+    <h1>Hello {{ user.displayName }}!</h1>
+    <button (click)="afAuth.logout()">Logout</button>
+</div>
+<ng-template #showLogin>
+    <p>Please login.</p>
+    <button (click)="googleSignin()">Login </button>
+</ng-template> -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+
+            <div class="bs-component">
+                <div class="jumbotron text-center">
+                    <h1 class="display-3">Property Listings</h1>
+                    <hr class="my-4">
+                    <p>Access the hottest properties listing!</p>
+                    <p class="lead">
+                        <a class="btn" href="#" role="button" (click)="login()"><img src="assets/img/google.png"></a>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

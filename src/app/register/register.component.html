@@ -1,0 +1,10 @@
+<div>
+        <input placeholder="Email" type="email" [(ngModel)]="signupData.email">
+        <input placeholder="Password" type="password" [(ngModel)]="signupData.password">
+    
+        <button (click)="afAuth.signup(signupData)" [disabled]="!signupData.email || !signupData.password">
+            Signup
+        </button>
+    
+        
+</div>

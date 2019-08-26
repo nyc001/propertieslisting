@@ -1,0 +1,39 @@
+<a (click)="location.back()" [routerLink]="">Back</a>
+
+<div *ngIf="list">
+        <form [formGroup]="form" ngNativeValidate (ngSubmit)="onSubmit()">
+                <div class='form-group'>
+                    <label>Title</label>
+                    <input class='form-control' type='text' name='title' formControlName="title" required>
+                </div>
+                <div class='form-group'>
+                    <label>Owner</label>
+                    <input class='form-control' type='text' name='owner' formControlName="owner" required>
+                </div>
+                <div class='form-group'>
+                    <label>City </label>
+                    <input class='form-control' type='text' name='city' formControlName="city" required>
+                </div>
+                <div class='form-group'>
+                    <label>Bedrooms</label>
+                    <input class='form-control' type='number' name='bedrooms' formControlName="bedrooms" required>
+                </div>
+                <div class='form-group'>
+                    <label>Type</label>
+                    <select class='form-control' type='text' name='type' formControlName="type" required>
+                        <option value='Estate'>Estate</option>
+                        <option value='Condo'>Condo</option>
+                        <option value='Apartment'>Apartment</option>
+                    </select>
+                </div>
+            
+                <div class='form-group'>
+                    <label>Price</label>
+                    <input class='form-control' type='number' name='price' formControlName="price" required>
+                </div>
+            
+               
+            
+                <input type='submit' value='Update' class='btn btn-success' [disabled]="!form.valid">
+            </form>
+    </div>

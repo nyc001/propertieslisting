@@ -1,0 +1,98 @@
+<a (click)="location.back()" [routerLink]="">Back</a>
+<!-- <ul *ngFor="let list of (fbService.lists | async)">
+    <div *ngIf="list.id == id">
+        
+    </div>
+
+</ul> -->
+
+<div *ngIf="list">
+    <div>
+        <h2 class="pager-header">
+            {{list.title}}
+            <small>{{list.city}}</small>
+        </h2>
+        <div class="row">
+            <div class="col-md-4">
+                <!-- img here -->
+                <img style="width:100%" class="thumbnail" src="{{profileUrl | async}}">
+            </div>
+            <div class="col-md-8">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        Owner:{{list.owner}}
+                    </li>
+                    <li class="list-group-item">
+                        Bedrooms:{{list.bedrooms}}
+                    </li>
+                    <li class="list-group-item">
+                        Type:{{list.type}}
+                    </li>
+                    <li class="list-group-item">
+                        Price: {{list.price | currency}}
+                    </li>
+
+                </ul>
+            </div>
+            <a class="btn btn-primary" [routerLink]="['/edit-listing/']+list.id">Edit</a>
+            <a class="btn btn-danger" href="#" data-toggle="modal" data-target="#exampleModal">Delete</a>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Delete Data</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="alert alert-danger" role="alert">
+                            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                            <span class="sr-only">Error:</span>
+                            This will permanently delete all data at this location, including all nested data.
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="deleteData()">Delete data</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <li class="text">
+            {{list.bedrooms}}
+        </li>
+        <li class="text">
+            {{list.city}}
+        </li>
+        <li class="text">
+            {{list.image}}
+        </li>
+        <li class="text">
+            {{list.path}}
+        </li>
+        <li class="text">
+            {{list.owner}}
+        </li>
+        <li class="text">
+            {{list.price | currency}}
+        </li>
+        <li class="text">
+            {{list.title}}
+        </li>
+        <li class="text">
+            {{list.type}}
+        </li>
+        <li class="text">
+            {{list.id}}
+        </li> -->
+    </div>
+
+</div>

@@ -15,19 +15,19 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
   }
-  login() {
+  async login() {
     // this.af.auth.signInWithPopup(new auth.GoogleAuthProvider());
     var provider = new auth.GoogleAuthProvider();
     provider.addScope("https://www.googleapis.com/auth/plus.login");
     provider.setCustomParameters({
       login_hint: "user@example.com"
     });
-    this.af.auth.signInWithPopup(
+    await this.af.auth.signInWithPopup(
       provider
     ).then(result=>{
-      // console.log("Signed in as:", result.user.uid);
+      console.log("Signed in as:", result.user.uid);
     }).catch(err=>{
-      // console.error("Authentication failed:", err);
+      console.error("Authentication failed:", err);
     })
     // this.afAuth.auth.signInWithPopup(new auth.EmailAuthProvider());
     // this.afAuth.googlelogin();
